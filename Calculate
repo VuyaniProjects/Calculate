@@ -1,0 +1,50 @@
+package calculate;
+
+import java.util.Scanner;
+
+public class oopBasic {
+
+        String name;
+        int age ;
+        String surname;
+
+    public int getAge() {
+        return age;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getSurname(){
+        return surname;
+    }
+
+    public String nameAndAge(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+         name = scanner.nextLine().toUpperCase();
+        System.out.println("Enter your surname: ");
+//        scanner.nextLine();
+        surname = scanner.nextLine().toUpperCase();
+        System.out.println("Enter your age: ");
+        age = scanner.nextInt();
+    return "=========================================\n"
+            +"Details: name " + name + " " + surname+ " age: "+ age+" \n"+
+            "=========================================";
+    }
+
+    @Override
+    public String toString() {
+        return "oopBasic{\n" +
+                " name=" + name + '\''+"\n"+""
+                +" surname ="+ surname+"\n"+
+                " age=" + age +
+                '}';
+    }
+
+    public static void main(String[] args) {
+                oopBasic obj = new oopBasic();
+                System.out.println( obj.nameAndAge());
+                System.out.println("Hello "+  obj.getName()+" "+ obj.getSurname()+ " and you are "+ obj.getAge()+" years old.");
+        System.out.println(obj.toString());
+            }
+        }
